@@ -1,9 +1,5 @@
 from django.contrib import admin
-from website.models.client import Client
-from website.models.fact import Fact
-from website.models.service import Service
-from website.models.about import About
-from website.models.testimonial import Testimonial
+from website.models.about import About, Fact, Client, Service, Testimonial
 from website.models.resume import Education, Experience, Certificates, SoftSkill, CodingSkill
 from website.models.portfolio import Portfolio, Category
 

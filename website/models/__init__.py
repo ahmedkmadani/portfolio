@@ -1,7 +1,3 @@
-from . import client
-from . import fact
-from . import service
-from . import about
-from . import testimonial
+from .about import About, Service, Testimonial, Fact, Client
 from .resume import Education, Experience, SoftSkill, Certificates, CodingSkill
 from .portfolio import Portfolio, Category

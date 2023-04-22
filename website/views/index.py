@@ -1,9 +1,5 @@
 from django.shortcuts import render
-from website.models.client import Client
-from website.models.fact import Fact
-from website.models.service import Service
-from website.models.about import About
-from website.models.testimonial import Testimonial
+from website.models.about import About, Service, Testimonial, Client, Fact
 
 
 
