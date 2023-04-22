@@ -6,3 +6,6 @@ class Testimonial(models.Model):
     testimonial_picture = models.ImageField(upload_to='website/static/testimonial_img')
     testimonial_author = models.CharField(max_length=255)
     testimonial_firm = models.CharField(max_length=255)
+
+    def __str__(self) -> str:
+        return self.testimonial_text
