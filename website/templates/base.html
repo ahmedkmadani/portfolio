@@ -58,20 +58,12 @@
             <!-- Navigation -->
             <div class="site-nav mobile-menu-hide">
               <ul class="leven-classic-menu site-main-menu">
-                <li class="menu-item menu-item-has-children current-menu-item">
-                  <a href="index.html">About Me</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item current-menu-item">
-                      <a href="index.html">About Me 1</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="index-2.html">About Me 2</a>
-                    </li>
-                  </ul>
+                <li class="menu-item current-menu-item">
+                  <a href="{% url 'index' %}">About Me</a>
                 </li>
 
                 <li class="menu-item">
-                  <a href="resume.html">Resume</a>
+                  <a href="{% url 'resume' %}">Resume</a>
                 </li>
 
                 <li class="menu-item menu-item-has-children">
