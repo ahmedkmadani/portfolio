@@ -239,11 +239,15 @@
                     </div>
 
                     <div id="clients_1" class="clients owl-carousel" data-mobile-items="1" data-tablet-items="3" data-items="6">
+
+                      {% for clinet in clinets %}
                       <div class="client-block">
-                        <a href="#" target="_blank" title="Golden Grid">
-                          <img src="{% static '/img/clients/client-1.png' %}" alt="Golden Grid">
+                        <a href="#" target="_blank" title="{{ client.client_name }}">
+                          <img src="{{ client.client_img }}" alt="{{ client.client_name }}">
                         </a>
                       </div>
+                      {% endfor %}
+
 
                       <div class="client-block">
                         <a href="#" target="_blank" title="Sweety">
@@ -302,7 +306,7 @@
                     <div class="lm-info-block gray-default">
                       <i class="linecons linecons-heart"></i>
                       <h4>Happy Clients</h4>
-                      <span class="lm-info-block-value">578</span>
+                      <span class="lm-info-block-value">{{ facts.happy_clinet }}</span>
                       <span class="lm-info-block-text"></span>
                     </div>
                   </div>
@@ -311,7 +315,7 @@
                     <div class="lm-info-block gray-default">
                       <i class="linecons linecons-clock"></i>
                       <h4>Working Hours</h4>
-                      <span class="lm-info-block-value">4,780</span>
+                      <span class="lm-info-block-value">{{ facts.working_hours }}</span>
                       <span class="lm-info-block-text"></span>
                     </div>
                   </div>
@@ -320,7 +324,7 @@
                     <div class="lm-info-block gray-default">
                       <i class="linecons linecons-star"></i>
                       <h4>Awards Won</h4>
-                      <span class="lm-info-block-value">15</span>
+                      <span class="lm-info-block-value">{{ facts.awards_won }}</span>
                       <span class="lm-info-block-text"></span>
                     </div>
                   </div>
@@ -329,7 +333,7 @@
                     <div class="lm-info-block gray-default">
                       <i class="linecons linecons-cup"></i>
                       <h4>Coffee Consumed</h4>
-                      <span class="lm-info-block-value">1,286</span>
+                      <span class="lm-info-block-value">{{ facts.coffee_consumed }}</span>
                       <span class="lm-info-block-text"></span>
                     </div>
                   </div>
