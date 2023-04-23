@@ -5,8 +5,6 @@ from website.models.about import About, Service, Testimonial, Client, Fact
 
 def index(request):
     clinets = Client.objects.all()
-    for i in clinets:
-          print(i.client_img)
     facts = Fact.objects.first()
     services = Service.objects.all()
     about = About.objects.first()
