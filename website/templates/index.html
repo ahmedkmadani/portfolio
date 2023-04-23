@@ -87,7 +87,7 @@
                     </div>
 
                     <div id="testimonials_1" class="testimonials owl-carousel" data-mobile-items="1" data-tablet-items="2" data-items="2">
-
+                      <!-- Testimonial 1 -->
                       {% for testimonial in testimonials %}
                       <div class="testimonial-item">
                         <!-- Testimonial Content -->
@@ -121,8 +121,8 @@
                         </div>
                         <!-- /Testimonial Content -->
                       </div>
-                    </div>
                       {% endfor %}
+                    </div>
                     <!-- /Testimonials -->
 
                     <div class="p-40"></div>
@@ -131,15 +131,14 @@
                     <div class="block-title">
                       <h2>Clients</h2>
                     </div>
-
+                    {% for client in clinets %}
                     <div id="clients_1" class="clients owl-carousel" data-mobile-items="1" data-tablet-items="3" data-items="6">
-
-                      {% for clinet in clinets %}
                       <div class="client-block">
                         <a href="#" target="_blank" title="{{ client.client_name }}">
                           <img src="{{ client.client_img.url }}" alt="{{ client.client_name }}">
                         </a>
                       </div>
+
                       {% endfor %}
                     </div>
                     <!-- /Clients Slider -->
