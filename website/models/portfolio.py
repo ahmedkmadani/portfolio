@@ -15,7 +15,7 @@ class Portfolio(models.Model):
     project_descripiton = models.CharField(max_length=255)
     project_link = models.CharField(max_length=255)
     category =  models.ForeignKey(Category, on_delete=models.CASCADE)
-    project_image = models.ImageField(upload_to='website/static/project_img', null=True)
+    project_image = models.ImageField(upload_to='project', null=True)
 
     def __str__(self) -> str:
         return self.project_name

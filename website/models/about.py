@@ -26,7 +26,7 @@ class Service(models.Model):
 
 class Testimonial(models.Model):
     testimonial_text = models.CharField(max_length=500)
-    testimonial_picture = models.ImageField(upload_to='website/static/testimonial_img')
+    testimonial_picture = models.ImageField(upload_to='testimo/')
     testimonial_author = models.CharField(max_length=255)
     testimonial_firm = models.CharField(max_length=255)
 
@@ -45,7 +45,7 @@ class Fact(models.Model):
 
 class Client(models.Model):
     client_name = models.CharField(max_length=30)
-    client_img = models.ImageField(upload_to='website/static/clients_img')
+    client_img = models.ImageField(upload_to='client/')
 
     def __str__(self) -> str:
         return self.client_name

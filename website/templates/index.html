@@ -94,7 +94,7 @@
                         <div class="testimonial-content">
                           <!-- Picture -->
                           <div class="testimonial-picture">
-                            <img src="{% static '/img/testimonials/testimonial-1.jpg' %}" alt="Billy Adams"/>
+                            <img src="{{ testimonial.testimonial_picture.url }}" alt="{{ testimonial.testimonial_firm }}"/>
                           </div>
                           <!-- /Picture -->
 
@@ -137,7 +137,7 @@
                       {% for clinet in clinets %}
                       <div class="client-block">
                         <a href="#" target="_blank" title="{{ client.client_name }}">
-                          <img src="{{ client.client_img }}" alt="{{ client.client_name }}">
+                          <img src="{{ client.client_img.url }}" alt="{{ client.client_name }}">
                         </a>
                       </div>
                       {% endfor %}

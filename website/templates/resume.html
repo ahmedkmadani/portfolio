@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <div id="main" class="site-main">
@@ -68,12 +68,12 @@
         </div>
 
         <div class="row">
-          {% for certificates in certificates%}
+          {% for certificates in certificates %}
           <div class=" col-xs-12 col-sm-6 ">
             <a href="//lmpixels.com/wp/leven-wp/wp-content/uploads/2019/11/1.jpg" class="lightbox">
               <div class="certificate-item clearfix">
                 <div class="certi-logo">
-                  <img src="./img/clients/client-7.png" alt="logo">
+                  <img src="{{ certificates.certi_logo.url }}" alt="logo">
                 </div>
 
                 <div class="certi-content">

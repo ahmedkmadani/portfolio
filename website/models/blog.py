@@ -12,7 +12,7 @@ class Blog(models.Model):
     content = models.CharField(max_length=5000)
     blog_date = models.DateField()
     blog_category  = models.ForeignKey(CategoryBlog, on_delete=models.CASCADE)
-    blog_img = models.ImageField(upload_to='website/static/blog_img')
+    blog_img = models.ImageField(upload_to='blog/')
 
 
     def __str__(self) -> str:

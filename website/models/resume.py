@@ -26,7 +26,7 @@ class Experience(models.Model):
 
 
 class Certificates(models.Model):
-    certi_logo = models.ImageField(upload_to='website/static/certi_img')
+    certi_logo = models.ImageField(upload_to='cert/')
     certi_title = models.CharField(max_length=255)
     certi_id = models.CharField(max_length=255)
     certi_date = models.CharField(max_length=255)
