@@ -23,7 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-r&x+_n3a(jgm0$#*tftd3po=(=-lr8p6w3p(sbvh1ggmi)ye-f")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG","False")
+# DEBUG = os.environ.get("DEBUG","False")
+
+DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = "portfolio.urls"
@@ -118,10 +121,11 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'website/static/'),
 )
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
-MEDIA_ROOT = BASE_DIR/'media'
+STATIC_ROOT = os.path.join(BASE_DIR, 'website/staticfiles')
+
+MEDIA_ROOT = BASE_DIR/'media/'
 MEDIA_URL = '/media/'
 
 
