@@ -60,26 +60,25 @@
                   </div>
                 </div>
 
+
                 <div class="row">
+                  {% for service in services%}
                   <div class="col-xs-12 col-sm-6">
                     <div class="info-list-w-icon">
-
-                      {% for service in services%}
                       <div class="info-block-w-icon">
                         <div class="ci-icon">
                           <i class="linecons {{ service.service_icon }}"></i>
                         </div>
-
                         <div class="ci-text">
                           <h4>{{ service.service_name }}</h4>
                           <p>{{ service.service_description }}</p>
                         </div>
                       </div>
-                      {% endfor %}
                     </div>
                   </div>
+                  {% endfor %}
                 </div>
-                <!-- /Services -->
+
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-12">
@@ -127,7 +126,7 @@
                       </div>
                       </div>
                       {% endfor %}
-                      </div>
+                  </div>
                     <!-- /Testimonials -->
 
                     <div class="p-40"></div>
@@ -145,12 +144,10 @@
                       </div>
                     </div>
                       {% endfor %}
-                    </div>
                     <!-- /Clients Slider -->
 
                     <div class="p-40"></div>
 
-                  </div>
                 </div>
 
                 <!-- Fun Facts -->
@@ -200,9 +197,7 @@
                   </div>
                 </div>
                 <!-- /Fun Facts -->
-
                 <div class="p-40"></div>
-
                 <!-- Pricing -->
                 <div class="row">
                   <div class=" col-xs-12 col-sm-12 ">
@@ -220,43 +215,47 @@
                       <div class="fw-package-wrap col-md-4 ">
                         <div class="fw-package">
                           <div class="fw-heading-row">
-                            <span>Silver</span>
+                            <span>Static Website</span>
                           </div>
 
                           <div class="fw-pricing-row">
-                            <span>$64</span>
-                            <small>per month</small>
+                            <span>$499</span>
+                            <small>Start from</small>
                           </div>
 
                           <div class="fw-button-row">
-                            <a href="#" target="_self" class="btn btn-secondary">Free Trial</a>
+                            <a href="#" target="_self" class="btn btn-secondary">Get Quote</a>
                           </div>
 
-                          <div class="fw-default-row">Lorem ipsum dolor</div>
-                          <div class="fw-default-row">Pellentesque scelerisque</div>
-                          <div class="fw-default-row">Morbi eu sagittis</div>
+                          <div class="fw-default-row">○ Home Page</div>
+                          <div class="fw-default-row">○ Portfolio Page</div>
+                          <div class="fw-default-row">○ Client Page</div>
+                          <div class="fw-default-row">○ Services Page</div>
+                          <div class="fw-default-row">○ Contact Us Page</div>
+
                         </div>
                       </div>
    
                       <div class="fw-package-wrap col-md-4 highlight-col ">
                         <div class="fw-package">
                           <div class="fw-heading-row">
-                            <span>Gold</span>
+                            <span>Dynamic Website</span>
                           </div>
 
                           <div class="fw-pricing-row">
-                            <span>$128</span>
-                            <small>per month</small>
+                            <span>$999</span>
+                            <small>Start from</small>
                           </div>
 
                           <div class="fw-button-row">
-                            <a href="#" target="_self" class="btn btn-primary">Free Trial</a>
+                            <a href="#" target="_self" class="btn btn-primary">Get Quote</a>
                           </div>
 
-                          <div class="fw-default-row">Lorem ipsum dolor</div>
-                          <div class="fw-default-row">Pellentesque scelerisque</div>
-                          <div class="fw-default-row">Morbi eu sagittis</div>
-                          <div class="fw-default-row">Donec non diam</div>
+                          <div class="fw-default-row">○ Dynamic Home Page</div>
+                          <div class="fw-default-row">○ Dynamic Portfolio Page</div>
+                          <div class="fw-default-row">○ Dynamic Client Page</div>
+                          <div class="fw-default-row">○ Dynamic Services Page</div>
+                          <div class="fw-default-row">○ Dynamic Contact Us Page</div>
                           <div class="fw-default-row">
                         </div>
                       </div>
@@ -265,23 +264,23 @@
                     <div class="fw-package-wrap col-md-4 default-col ">
                       <div class="fw-package">
                         <div class="fw-heading-row">
-                          <span>Platinum</span>
+                          <span>Mobile App Development</span>
                         </div>
 
                         <div class="fw-pricing-row">
-                          <span>$256</span>
-                          <small>per month</small>
+                          <span>$1,499</span>
+                          <small>Start from</small>
                         </div>
 
                         <div class="fw-button-row">
-                          <a href="#" target="_self" class="btn btn-primary">Free Trial</a>
+                          <a href="#" target="_self" class="btn btn-primary">Get Quote</a>
                         </div>
 
-                        <div class="fw-default-row">Lorem ipsum dolor</div>
-                        <div class="fw-default-row">Pellentesque scelerisque</div>
-                        <div class="fw-default-row">Morbi eu sagittis</div>
-                        <div class="fw-default-row">Donec non diam</div>
-                        <div class="fw-default-row">Aenean nec libero</div>
+                        <div class="fw-default-row">○ Android Application</div>
+                        <div class="fw-default-row">○ IOS Application</div>
+                        <div class="fw-default-row">○ BackEnd Integration</div>
+                        <div class="fw-default-row">○ Publish to Google Play</div>
+                        <div class="fw-default-row">○ Publish to App Store</div>
                       </div>
                     </div>
                   </div>
@@ -290,5 +289,6 @@
               </div>
             </div>
           </div>
+        </div>
         </div>
 {% endblock content %}
