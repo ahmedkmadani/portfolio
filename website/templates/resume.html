@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 
+
 <div id="main" class="site-main">
   <div id="main-content" class="single-page-content">
     <div id="primary" class="content-area">
@@ -21,41 +22,40 @@
               <h2>Education</h2>
             </div>
 
-            {% for education in education%}
             <div id="timeline_1" class="timeline clearfix">
-              <div class="timeline-item clearfix">
-                <h5 class="item-period ">{{ education.university_year }}</h5>
-                <span class="item-company">{{  education.university_name}}</span>
-                <h4 class="item-title">{{ education.major }}</h4>
-                <p>{{ education.major_description }}</p>
-              </div>
-              {% endfor %}
 
+              {% for education in education%}
+              <div id="timeline_1" class="timeline clearfix">
+                <div class="timeline-item clearfix">
+                  <h5 class="item-period ">{{ education.university_year }}</h5>
+                  <span class="item-company">{{  education.university_name}}</span>
+                  <h4 class="item-title">{{ education.major }}</h4>
+                  <p>{{ education.major_description }}</p>
+                </div>
+                {% endfor %}
             </div>
-          </div>
           </div>
 
           <div class=" col-xs-12 col-sm-6 ">
             <div class="block-title">
               <h2>Experience</h2>
             </div>
-            {% for experience in experience %}
+
             <div id="timeline_2" class="timeline clearfix">
-              <div class="timeline-item clearfix">
-                <h5 class="item-period current">{{ experience.start_date }} - {{ experience.end_date  }}</h5>
-                <span class="item-company">{{ experience.company_name }}</span>
-                <h4 class="item-title">{{ experience.job_title  }}</h4>
-                <p>{{ experience.job_description }}</p>
-              </div>
-            {% endfor %}
+
+              {% for experience in experience %}
+              <div id="timeline_2" class="timeline clearfix">
+                <div class="timeline-item clearfix">
+                  <h5 class="item-period current">{{ experience.start_date }} - {{ experience.end_date  }}</h5>
+                  <span class="item-company">{{ experience.company_name }}</span>
+                  <h4 class="item-title">{{ experience.job_title  }}</h4>
+                  <p>{{ experience.job_description }}</p>
+                </div>
+              {% endfor %}
 
             </div>
           </div>
         </div>
-    </div>
-  </div>
-      </div>
-      </div>
 
         <div class="row">
           <div class=" col-xs-12 col-sm-12 ">
@@ -68,6 +68,7 @@
         </div>
 
         <div class="row">
+
           {% for certificates in certificates %}
           <div class=" col-xs-12 col-sm-6 ">
             <a href="//lmpixels.com/wp/leven-wp/wp-content/uploads/2019/11/1.jpg" class="lightbox">
@@ -96,7 +97,6 @@
             </a>
           </div>
           {% endfor %}
-
         </div>
 
         <div class="row">
@@ -110,6 +110,7 @@
             <div class="block-title">
               <h2>Design Skills</h2>
             </div>
+
             {% for softSkill in softSkill %}
             <div id="skills_1" class="skills-info skills-first-style">
               <div class="clearfix">
@@ -120,11 +121,10 @@
               <div id="skill_1" data-value="{{ softSkill.skill_precntage }}" class="skill-container">
                 <div class="skill-percentage"></div>
               </div>
-              {% endfor %}
             </div>
+              {% endfor %}
 
           </div>
-        </div>
 
           <div class=" col-xs-12 col-sm-6 ">
             <div class="block-title">
@@ -132,21 +132,22 @@
             </div>
 
 
+            {% for codingSkill in codingSkill %}
             <div id="skills_2" class="skills-info skills-first-style">
-              {% for codingSkill in codingSkill %}
-              <div class="clearfix">
-                <h4>{{ codingSkill.skill }}</h4>
-                <div class="skill-value">{{ codingSkill.skill_precntage }}%</div>
-              </div>
-              <div id="skill_5" data-value="{{ codingSkill.skill_precntage }}" class="skill-container">
-                <div class="skill-percentage"></div>
-              </div>
-              {% endfor %}
+            <div class="clearfix">
+              <h4>{{ codingSkill.skill }}</h4>
+              <div class="skill-value">{{ codingSkill.skill_precntage }}%</div>
+            </div>
+            <div id="skill_5" data-value="{{ codingSkill.skill_precntage }}" class="skill-container">
+              <div class="skill-percentage"></div>
+            </div>
+            {% endfor %}
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 {% endblock content %}
