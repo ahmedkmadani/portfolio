@@ -7,5 +7,6 @@ urlpatterns = [
     path(r'resume', resume.resume, name="resume"),
     path(r'portfolio', portfolio.portfolio, name="portfolio"),
     path(r'blog', blog.blog, name="blog"),
+    path(r'<int:pk>/detailes', blog.blog_detailes, name="detailes"),
     path(r'contact', contact.contact, name="contact"),
 ]

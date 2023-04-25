@@ -46,6 +46,7 @@ class Fact(models.Model):
 class Client(models.Model):
     client_name = models.CharField(max_length=30)
     client_img = models.ImageField(upload_to='client/')
+    client_url = models.CharField(max_length=30, null=True)
 
     def __str__(self) -> str:
         return self.client_name

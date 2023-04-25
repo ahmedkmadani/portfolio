@@ -25,7 +25,7 @@
                     <div class="category">
                       <a href="#" title="View all posts in WordPress">{{ blog.blog_category }}</a>
                     </div>
-                    <a href="blog-post-1.html">
+                    <a href="{% url 'detailes' blog.pk %}">
                       <img src="{{ blog.blog_img.url }}" alt="{{ blog.title }}" title="" />
                       <div class="mask"></div>
                     </a>

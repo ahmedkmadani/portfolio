@@ -26,7 +26,7 @@
                   </li>
                   {% for category in category %}
                   <li>
-                    <a class="filter btn btn-sm btn-link" data-group="category_detailed">{{ category.name }}</a>
+                    <a class="filter btn btn-sm btn-link" data-group="{{ category.name  }}">{{ category.name }}</a>
                   </li>
                   {% endfor %}
                 </ul>
@@ -37,13 +37,13 @@
 
                   {% for portfolio in portfolios %}
 
-                  <figure class="item standard" data-groups='["category_all", "category_detailed"]'>
+                  <figure class="item direct" data-groups='["category_all", "{{ portfolio.category }}"]'>
                     <div class="portfolio-item-img">
                       <img src="{{ portfolio.project_image.url }}" alt="{{ portfolio.project_name }}" title="" />
-                      <a href="portfolio-project-2.html" class="ajax-page-load"></a>
+                      <a target="_blank" href="{{ portfolio.project_link }}" ></a>
                     </div>
 
-                    <i class="far fa-file-alt"></i>
+                    <i class="fa fa-link"></i>
                     <h4 class="name">{{ portfolio.project_name }}</h4>
                     <span class="category">{{ portfolio.category}}</span>
                   </figure>

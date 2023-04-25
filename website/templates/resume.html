@@ -72,7 +72,7 @@
 
           {% for certificates in certificates %}
           <div class=" col-xs-12 col-sm-6 ">
-            <a href="" class="lightbox">
+            <a href="{{ certificates.certi_image }}" target="_blank">
               <div class="certificate-item clearfix">
                 <div class="certi-logo">
                   <img src="{{ certificates.certi_logo.url }}" alt="logo">

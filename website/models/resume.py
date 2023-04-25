@@ -30,6 +30,7 @@ class Certificates(models.Model):
     certi_title = models.CharField(max_length=255)
     certi_id = models.CharField(max_length=255)
     certi_date = models.CharField(max_length=255)
+    certi_image = models.CharField(max_length=255, null=True)
 
     def __str__(self) -> str:
         return self.certi_title
